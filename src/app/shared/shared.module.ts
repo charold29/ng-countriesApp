@@ -12,6 +12,9 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     FooterComponent
   ],
+  exports: [
+    SidebarComponent
+  ],
   imports: [
     CommonModule
   ]
