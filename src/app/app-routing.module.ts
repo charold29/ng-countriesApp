@@ -20,7 +20,7 @@ const routes: Routes = [
         component: ByCapitalComponent
     },
     {
-        path: "pais/:id",
+        path: "country/:id",
         component: ShowCountryComponent
     },
     {
@@ -38,5 +38,5 @@ const routes: Routes = [
     ]
 })
 export class AppRoutingModule {
-    
+
 }
