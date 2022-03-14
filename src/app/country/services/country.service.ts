@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class CountryService {
 
+  private apiUrl:string = 'https://restcountries.com/v3.1/';
+
   constructor() { }
+
+  
 }
