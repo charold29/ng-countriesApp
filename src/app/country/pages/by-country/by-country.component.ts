@@ -14,9 +14,10 @@ export class ByCountryComponent {
   hasError: boolean = false;
   countries: Country[] = [];
 
-  search(){
+  search( term:string){
     this.hasError = false;
-    console.log(this.term);
+    this.term = term;
+    
     this.countryService.searchCountry(this.term)
       .subscribe( (countries) => {
         this.countries = countries;

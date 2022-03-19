@@ -2,15 +2,10 @@
 <hr>
 
 <div class="row">
-    <div class="col">
-        <form (ngSubmit)="search()" autocomplete="off">
-            <input type="text"
-                   name="term"
-                   class="form-control"
-                   [(ngModel)]="term"
-                   placeholder="Buscar país..."/>
-        </form>
-    </div>
+    <app-country-input 
+        (onEnter)="search( $event )"
+    >
+    </app-country-input>
 </div>
 <hr>
 
@@ -21,35 +16,6 @@
 
 <div *ngIf="countries.length>0" class="row">
     <div class="col">
-        <!-- <table class="table table-hover">
-
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Bandera</th>
-                    <th>Nombre</th>
-                    <th>Población</th>
-                    <th></th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr *ngFor="let country of countries; let i = index">
-                    <td>{{i+1}}</td>
-                    <td>
-                        <img class="small-flag" 
-                             [src]="country.flags.png"
-                        > 
-                    </td>
-                    <td>{{country.name.common}}</td>
-                    <td>{{country.population | number}}</td>
-                    <td>
-                        <a [routerLink]="['/country', country.cca2|lowercase]">Ver...</a>
-                    </td>
-                </tr>
-            </tbody>
-
-        </table> -->
         <app-country-table [countries]="countries"></app-country-table>
     </div>
 </div>
