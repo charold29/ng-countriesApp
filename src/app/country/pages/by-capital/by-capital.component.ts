@@ -30,10 +30,4 @@ export class ByCapitalComponent {
       });
   }
 
-  suggestions( term:string ){
-    this.hasError = false;
-    // create suggestion
-  }
-
-
 }
