@@ -4,6 +4,8 @@
 <div class="row">
     <app-country-input 
         (onEnter)="search( $event )"
+        (onDebounce)="suggestions( $event )"
+        inputName="país"
     >
     </app-country-input>
 </div>

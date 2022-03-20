@@ -10,6 +10,8 @@ import { CountryService } from '../../services/country.service';
 })
 export class ByCountryComponent {
 
+  constructor( private countryService:CountryService ) {}
+
   term: string = '';
   hasError: boolean = false;
   countries: Country[] = [];
@@ -28,6 +30,9 @@ export class ByCountryComponent {
       });
   }
 
-  constructor( private countryService:CountryService ) {}
+  suggestions( term:string ){
+    this.hasError = false;
+    // create suggestion
+  }
   
 }

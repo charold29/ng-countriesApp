@@ -3,5 +3,6 @@
            name="term"
            class="form-control"
            [(ngModel)]="term"
-           placeholder="Buscar país..."/>
+           (input)="keyPressed()"
+           placeholder="Buscar {{inputName}}..."/>
 </form>
