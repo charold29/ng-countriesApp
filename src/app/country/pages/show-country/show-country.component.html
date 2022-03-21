@@ -1,1 +1,49 @@
-<p>show-country works!</p>
+<div *ngIf="!country; else divCountry"
+    class="alert alert-info">
+    Espere por favor...
+</div>
+
+<ng-template #divCountry>
+    
+    <div class="row">
+        <div class="col-12">
+            <h1>País: <small style="font-style: italic">{{country.name.official}}</small></h1>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img style="width:185px" [src]="country.flags.png" class="img-thumbnail">
+        </div>
+        
+        <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Población:</strong> {{country.population | number}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código numérico:</strong> {{country.idd.root}}{{country.idd.suffixes[0]}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código alpha3:</strong> {{country.cca3}} 
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span *ngFor="let translation of country.translations | keyvalue" 
+                  class="badge bg-primary me-1">
+                  {{translation.value.official}}
+            </span>
+        </div>
+    </div>
+
+</ng-template>

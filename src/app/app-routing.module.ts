@@ -20,7 +20,7 @@ const routes: Routes = [
         component: ByCapitalComponent
     },
     {
-        path: "country/:id",
+        path: "country/:countryId",
         component: ShowCountryComponent
     },
     {
