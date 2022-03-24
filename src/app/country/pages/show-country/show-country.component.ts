@@ -8,6 +8,19 @@ import { CountryService } from '../../services/country.service';
   selector: 'app-show-country',
   templateUrl: './show-country.component.html',
   styles: [
+    `
+    small{
+      font-style: italic;
+    }
+
+    img{
+      width:185px;
+    }
+
+    .key{
+      width:40px;
+    }
+    `
   ]
 })
 export class ShowCountryComponent implements OnInit {
