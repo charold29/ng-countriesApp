@@ -16,7 +16,7 @@
         
         <div class="col-4">
             <h3>Bandera</h3>
-            <img style="width:185px" [src]="country.flags.png" class="img-thumbnail">
+            <img [src]="country.flags.png" class="img-thumbnail" style="width:185px" >
         </div>
         
         <div class="col">
@@ -35,14 +35,18 @@
         </div>
 
     </div>
-
+    
     <h3>Traducciones</h3>
     <div class="row">
         <div class="col">
-            <span *ngFor="let translation of country.translations | keyvalue" 
-                  class="badge bg-primary me-1">
-                  {{translation.value.official}}
-            </span>
+            
+            <div *ngFor="let translation of country.translations | keyvalue" >
+                  <span class="badge bg-primary me-1" style="width:40px;">
+                    {{translation.key}}
+                  </span>
+                  <span>{{translation.value.official}}</span>
+            </div>
+        
         </div>
     </div>
 
