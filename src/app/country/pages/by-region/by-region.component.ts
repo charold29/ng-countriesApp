@@ -29,14 +29,17 @@ export class ByRegionComponent {
   }
 
   activateRegion( region:string ){
-    this.activeRegion = region;
+  
+    // if( region === this.activeRegion ) { return; } 
 
+    this.activeRegion = region;
+    // this.countries = [];
+    
     this.countryService.searchRegion(region)
       .subscribe( countries => {
         this.countries = countries;
       });
     
-    //TODO: hacer el llamado al servicio
   }
 
 }

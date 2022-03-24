@@ -23,7 +23,6 @@ export class ByCountryComponent {
     this.countryService.searchCountry(this.term)
       .subscribe( (countries) => {
         this.countries = countries;
-        console.log(countries)
       }, (err)=>{
         this.hasError = true;
         this.countries = [];
