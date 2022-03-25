@@ -16,8 +16,8 @@ import { CountryService } from '../../services/country.service';
 })
 export class ByRegionComponent {
 
-  regions:string[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
-  activeRegion:string = '';
+  regions: string[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  activeRegion: string = '';
   countries: Country[] = [];
 
   constructor( private countryService:CountryService ) { }
