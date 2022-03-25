@@ -30,10 +30,10 @@ export class ByRegionComponent {
 
   activateRegion( region:string ){
   
-    // if( region === this.activeRegion ) { return; } 
+    if( region === this.activeRegion ) { return; } 
 
     this.activeRegion = region;
-    // this.countries = [];
+    this.countries = [];
     
     this.countryService.searchRegion(region)
       .subscribe( countries => {
